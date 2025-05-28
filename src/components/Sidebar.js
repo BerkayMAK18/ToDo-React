@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Header({children}){
+function Sidebar({children}){
 
 
 
     return(
-        <div className='Header'>
+        <div className='Sidebar'>
             {children}
         </div>
 
@@ -15,4 +15,4 @@ function Header({children}){
 
 }
 
-export default Header
+export default Sidebar
