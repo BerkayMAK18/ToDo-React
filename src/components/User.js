@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../images/bill.gif'
 
 function User({}){
 
@@ -6,7 +7,14 @@ function User({}){
 
     return(
         <div className='User'>
-            User
+            <div className='logo'>
+                <img src={logo} alt="logo" />
+            </div>
+            <div className='info'>
+                <p>Contempt</p>
+                <a href='#'>Logout!</a>
+            </div>
+
         </div>
 
     )
