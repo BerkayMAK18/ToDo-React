@@ -6,7 +6,7 @@ function Calender({}){
 
     return(
         <div className='Calender'>
-            Calender
+            
         </div>
 
     )
