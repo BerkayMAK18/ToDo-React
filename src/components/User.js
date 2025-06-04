@@ -11,8 +11,8 @@ function User({}){
                 <img src={logo} alt="logo" />
             </div>
             <div className='info'>
-                <p>Contempt</p>
-                <a href='#'>Logout!</a>
+                <p>TestUser</p>
+                <a href='#'>Logout</a>
             </div>
 
         </div>
