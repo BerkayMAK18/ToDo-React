@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Todo from './Todo'
 import Next7days from './Next7Days'
+import { TodoContext } from '../context'
 
 function Todos({}){
 
-    const selectedProject = 'PLACEHOLDER'
+    const { selectedProject } = useContext(TodoContext)
 
     const todos = [
         {
