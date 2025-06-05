@@ -25,9 +25,10 @@
 .Main {
   width: 100%;
   height: 100%;
-  background-image: url("./images/forest.jpg");
+  background-image: url("./images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 /* User */
@@ -354,4 +355,31 @@
 }
 .ProjectForm button:hover {
   filter: brightness(1.1);
+}
+
+/* Todos */
+.Todos {
+  width: 450px;
+  height: 80%;
+  background-color: white;
+
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+
+  border-radius: 4px;
+  opacity: 0.9;
+
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+.Todos .selected-project {
+  margin: 1rem 0;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #eeeeee;
+}
+.Todos .todos {
+  overflow-y: auto;
 }
