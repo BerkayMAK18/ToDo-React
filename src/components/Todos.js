@@ -10,14 +10,14 @@ function Todos({}){
         {
             id : 'd54sd4',
             text : 'Go for a run',
-            checked : false,
+            checked : true,
             color : '#000000',
             project : 'personal'
         },
         {
             id : 'd54fdf',
             text : 'Meeting',
-            checked : true,
+            checked : false,
             color : '#00ff00',
             project : 'work'
         },
@@ -34,7 +34,7 @@ function Todos({}){
                 <Next7days todos={todos} />
                 :
                 todos.map( todo =>
-                    <Todo todo={todo} key={todo.key} />
+                    <Todo todo={todo} key={todo.id} />
                 )
             }
 
