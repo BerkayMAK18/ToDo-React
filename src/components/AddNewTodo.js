@@ -1,13 +1,21 @@
 import React, {useState} from 'react'
 import Modal from './Modal'
 import { Palette, X} from 'react-bootstrap-icons'
+import TodoForm from '../TodoForm'
 
 function AddNewTodo({}){
     const [showModal, setShowModal] = useState(false)
     const [text, setText] = useState('')
 
+    const projects = [
+        {id : 1, name : "personal", numOfTodos : 0},
+        {id : 2, name : "work", numOfTodos : 1},
+        {id : 3, name : "other", numOfTodos : 2},
+    ]
 
+    function handleSubmit(e){
 
+    }
     return(
         <div className='AddNewTodo'>
             <div className='btn'>
@@ -16,38 +24,15 @@ function AddNewTodo({}){
                 </button>
             </div>
             <Modal showModal={showModal} setShowModal={setShowModal}>
-                <form>
-                    <div className='text'>
-                        <h3> Add new to do!</h3>
-                        <input
-                            type='text'
-                            value={text}
-                            onChange={e => setText(e.target.value)}
-                            placeholder='To do...'
-                            autoFocus
-                        />
-                    </div>
-                    <div className='pick-project'>
-                        <div className='title'>
-                            <Palette/>
-                            <p>Choose a project</p>
-                        </div>
-                        <div className='projects'>
-                            <div className='project active'>
-                                personal
-                            </div>
-                            <div className='project'>
-                                work
-                            </div>
-                        </div>
-                    </div>
-                    <div className='cancel'>
-                        <X size='40px' />
-                    </div>
-                    <div className='confirm'>
-                        <button> + Add to do </button>
-                    </div>
-                </form>
+                <TodoForm 
+                    handleSubmit={handleSubmit}
+                    heading='Add new to do!'
+                    text={text}
+                    setText={setText}
+                    projects={projects}
+                    showButtons={true}
+                    setShowModal={setShowModal}
+                />
             </Modal>
         </div>
 
